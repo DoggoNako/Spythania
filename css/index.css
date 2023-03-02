@@ -7,9 +7,10 @@
 :root{
     --color-bg: #2c2f33; /*Gris*/
     --color-raised-bg: #23272a; /*Noir*/
-
+    
     /* Text Colors */
     --txt-color: #ffffff;
+    --underline-txt: #5865F2; /*Bleu-Violet*/
 
     /* Distance Var */
     --navBar-height: 3.5rem;
@@ -23,10 +24,7 @@
     color: white;
 }
 
-body{
-    background-color: var(--color-bg);
-}
-
+body{background-color: var(--color-bg);}
 
 header.navBar{
     display: flex;
@@ -41,12 +39,12 @@ img{
     margin-top: 5px;
 }
 
-.navBar#start img{
+.navBar#pfp img{
     border-radius: var(--navBar-height);
     outline: solid var(--color-raised-bg) 0.3rem;
 }
 
-.navBar#mid{
+.navBar#start{
     background-color: var(--color-raised-bg);
     border-radius: var(--navBar-height);
     width: 100%;
@@ -56,12 +54,18 @@ img{
     align-items: center;
 }
 
-.navBar#mid a{
-    margin-left: 1rem;
+.navBar#start a{
+    margin-left: 1.5rem;
     font-family: Arial Black, Arial Bold, Gadget, sans-serif;
     color: var(--txt-color);
     font-size: large;
 }
 
-.navBar#mid a:hover{
+.navBar#start a:hover:after{
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--underline-txt);
+    border-radius: 0.25rem;
 }
